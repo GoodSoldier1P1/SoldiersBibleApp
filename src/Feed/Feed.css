@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Diphylleia', serif;
+}
+
+.feedComment {
+    text-align: center;
+    font-size: larger;
+}
+
+.feedInfo {
+    text-align: center;
+}
+
+.verseInfo {
+    text-align: center;
+    font-size: x-large;
+}
+
+.timestamp {
+    text-align: center;
+    margin-top: 5vh;
+}
+
+#searchBtn {
+    font-size: larger;
+    border: 1px solid black;
+    padding: 3px;
+    border-radius: 10%;
+    background-color: #04bdfe;
+    text-decoration: none;
+    text-shadow: 1px 1px;
+    color: black;
+    margin-right: 3%;
+}
+
+#searchBtn:hover {
+    zoom: 110%;
+    background-color: #7dd5f5;
+}
+
+.feedItem {
+    /* border: 1px solid black; */
+    margin-top: 3%;
+    list-style-type: none;
+}
+
+hr {
+    width: 45%;
+    margin-left: 25%;
+    margin-top: 2%;
+}
+
+.feedMargin {
+    margin: 0 20% 0 20%;
+}
+
+.loadBtn {
+    font-size: larger;
+    border: 1px solid black;
+    padding: 3px;
+    border-radius: 10%;
+    background-color: #04bdfe;
+    text-decoration: none;
+    text-shadow: 1px 1px;
+    color: black;
+    margin-left: 43%;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+}
+
+.loadBtn:hover {
+    zoom: 110%;
+    background-color: #7dd5f5;
+    cursor: pointer;
+}
+
+.loading {
+    margin-left: 43%;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+    font-size: larger;
+    border: 1px solid black;
+    padding: 3px;
+    border-radius: 10%;
+    background-color: #04bdfe;
+    text-decoration: none;
+    text-shadow: 1px 1px;
+    color: black;
+}
+
+.loading:hover {
+    zoom: 110%;
+    background-color: #7dd5f5;
+    cursor: pointer;
+}
+
+.updateBtn {
+    background-color: #04bdfe;
+    padding: 0.5%;
+    margin: 0 0 0 15px;
+    font-size: large;
+    border: 1px solid black;
+    padding: 0.3%;
+    border-radius: 10%;
+    background-color: #04bdfe;
+    text-decoration: none;
+    text-shadow: 0.5px 0.5px;
+    color: black;
+    font-variant: small-caps;
+}
+
+.updateBtn:hover {
+    zoom: 110%;
+    background-color: #7dd5f5;
+}
+
+.deleteBtn {
+    padding: 0.5%;
+    margin: 0 0 0 75%;
+    font-size: large;
+    border: 1px solid black;
+    padding: 0.3%;
+    border-radius: 10%;
+    background-color: rgb(253, 64, 64);
+    text-decoration: none;
+    text-shadow: 0.5px 0.5px;
+    color: black;
+    font-variant: small-caps;
+}
+
+.deleteBtn:hover {
+    zoom: 110%;
+    background-color: rgb(253, 0, 0);
+}

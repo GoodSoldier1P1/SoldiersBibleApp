@@ -1,0 +1,29 @@
+* {
+    font-family: 'Diphylleia', serif !important;
+}
+
+body{
+    background: #7F7FD5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.pageInfo {
+    /* font-size: xx-large !important; */
+    /* border: 1px solid black; */
+    padding: 5% 5% 0 5%;
+}
+
+.button {
+    font-size: larger !important;
+}
+
+.links {
+    font-size: large !important;
+}
+
+.box {
+    /* border: 1px solid black; */
+    width: 200%;
+    padding: 15%;
+}

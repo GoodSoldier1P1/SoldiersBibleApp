@@ -1,0 +1,113 @@
+.searchBar {
+    text-align: center;
+    padding: 5%;
+    height: 10vh;
+    /* border-top: 1px solid black; */
+}
+
+.searchLabel {
+    font-size: x-large;
+}
+
+.searchInput {
+    padding: 0.5%;
+    width: 25%;
+}
+
+.searchBtn {
+    background-color: #04bdfe;
+    padding: 0.5%;
+    margin: 0 0 0 15px;
+    font-size: large;
+    border: 1px solid black;
+    padding: 0.3%;
+    border-radius: 10%;
+    background-color: #04bdfe;
+    text-decoration: none;
+    text-shadow: 1px 1px;
+    color: black;
+    font-variant: small-caps;
+}
+
+.card {
+    text-align: center;
+    font-size: x-large;
+    /* border: 1px solid black; */
+    margin-bottom: 2vh;
+    /* padding: 1%; */
+}
+
+.nav {
+    text-align: right;
+    margin: 5vh 1%;
+}
+
+#logout {
+    margin: 0 5% 0 10%;
+    font-size: larger;
+    border: 1px solid black;
+    padding: 3px;
+    border-radius: 10%;
+    background-color: rgb(253, 64, 64);
+    text-decoration: none;
+    text-shadow: 1px 1px;
+    color: black;
+}
+
+#logout:hover {
+    zoom: 110%;
+    background-color: rgb(253, 0, 0);
+}
+
+#profile {
+    font-size: larger;
+    border: 1px solid black;
+    padding: 3px;
+    border-radius: 10%;
+    background-color: #04bdfe;
+    text-decoration: none;
+    text-shadow: 1px 1px;
+    color: black;
+}
+
+#profile:hover {
+    zoom: 110%;
+    background-color: #7dd5f5;
+}
+
+#feed {
+    font-size: larger;
+    border: 1px solid black;
+    padding: 3px;
+    border-radius: 10%;
+    background-color: #04bdfe;
+    text-decoration: none;
+    text-shadow: 1px 1px;
+    color: black;
+    margin-right: 5%;
+    transition: transform .2s;
+}
+
+#feed:hover {
+    zoom: 110%;
+    background-color: #7dd5f5;
+}
+
+#saveBtn,
+#shareBtn,
+#favoriteBtn {
+    font-size: large;
+    border: 1px solid black;
+    padding: 0.3%;
+    border-radius: 10%;
+    background-color: #04bdfe;
+    text-decoration: none;
+    text-shadow: 1px 1px;
+    color: black;
+    margin: 5vh 5% 0 20%;
+    font-variant: small-caps;
+}
+
+.myModal {
+    margin: 15vh 30%;
+}
