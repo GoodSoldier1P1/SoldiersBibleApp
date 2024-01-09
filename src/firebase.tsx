@@ -8,13 +8,13 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDTWBwv5_AXg6Vl7onCZVKPMxDgsMQUBKc",
-  authDomain: "bible-app-3d327.firebaseapp.com",
-  projectId: "bible-app-3d327",
-  storageBucket: "bible-app-3d327.appspot.com",
-  messagingSenderId: "1040173526844",
-  appId: "1:1040173526844:web:873c92523a7087ed733839",
-  measurementId: "G-NPYCGZ61X8"
+  apiKey: "AIzaSyBFKqyMgwQydnsYEAnCI46sspgJtD28lmw",
+  authDomain: "soldiersbibleapp.firebaseapp.com",
+  projectId: "soldiersbibleapp",
+  storageBucket: "soldiersbibleapp.appspot.com",
+  messagingSenderId: "670390147784",
+  appId: "1:670390147784:web:453aa8c33758c52621e3fd",
+  measurementId: "G-SFPG3JP7KZ"
 };
 
 // Initialize Firebase
