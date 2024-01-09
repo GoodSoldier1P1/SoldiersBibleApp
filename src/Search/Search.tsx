@@ -6,7 +6,6 @@ import { signOut, onAuthStateChanged } from "firebase/auth";
 import { auth, db } from "../firebase";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { addToActivityFeed } from "../FirestoreHelper/FirestoreHelper";
-import MaterialUIModal from "../Modals/MuiModal";
 
 interface Bible {
     verseText: string;
@@ -179,6 +178,15 @@ const Search = (props: any) => {
 
         return () => unsubscribe();
     };
+
+    const [MaterialUIModal, setMaterialUIModal] = useState<any>(null);
+
+    useEffect(() => {
+        // Dynamically import MaterialUIModal when needed
+        import("../Modals/MuiModal").then((module) => {
+            setMaterialUIModal(() => module.default);
+        });
+    }, []);
 
     return (
         <>
