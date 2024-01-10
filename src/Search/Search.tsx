@@ -6,6 +6,7 @@ import { signOut, onAuthStateChanged } from "firebase/auth";
 import { auth, db } from "../firebase";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { addToActivityFeed } from "../FirestoreHelper/FirestoreHelper";
+import logo from '../assets/Emanuel.jpg'
 
 interface Bible {
     verseText: string;
@@ -193,7 +194,7 @@ const Search = (props: any) => {
 
             <div>
                 <Link rel="stylesheet" href="/" >
-                    <img src="./src/assets/Emanuel.jpg" alt="Emanuel" id="logo" />
+                    <img src={logo} alt="Emanuel" id="logo" />
                 </Link>
             </div>
 

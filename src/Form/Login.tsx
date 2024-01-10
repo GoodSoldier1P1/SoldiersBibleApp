@@ -14,6 +14,7 @@ import { getAuth, onAuthStateChanged, signInWithEmailAndPassword } from 'firebas
 import { auth } from '../firebase';
 import "./Login.css"
 import { useNavigate } from 'react-router-dom';
+import logo from '../assets/Emanuel.jpg'
 
 function Copyright(props: any) {
   return (
@@ -94,7 +95,7 @@ export default function SignIn() {
         >
           <div>
             <Link rel="stylesheet" href="/" >
-              <img src="./src/assets/Emanuel.jpg" alt="Emanuel" id="logo" />
+              <img src={logo} alt="Emanuel" id="logo" />
             </Link>
           </div>
           <Typography component="h1" variant="h5">
