@@ -13,9 +13,13 @@ body{
 .card {
     text-align: center;
     margin-top: 15vh;
-    width: 100% !important;
+    margin-left: 15%;
+    width: 70% !important;
     height: auto !important;
     text-shadow: 1px 1.3px;
+    border: 1px solid black;
+    border-radius: 2%;
+    background-color: #009bff;
 }
 
 .card-text{
@@ -73,4 +77,17 @@ body{
     height: 55px;
     width: auto;
     margin: 10px 10px 0 10px;
+}
+
+.soldiersBible {
+    text-align: center;
+    font-size: x-large;
+    text-shadow: 1px 1.3px;
+}
+
+.siteInfo {
+    text-align: center;
+    padding: 2%;
+    /* border-top: 1px solid black; */
+    text-shadow: 1px 1.3px;
 }

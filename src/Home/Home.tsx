@@ -4,6 +4,7 @@ import Link from '@mui/material/Link';
 // import { useNavigate } from "react-router-dom";
 import { setDoc, doc } from "firebase/firestore";
 import { db } from "../firebase";
+import logo from '../assets/Emanuel.jpg'
 
 
 interface Bible {
@@ -63,8 +64,12 @@ const Home = () => {
         <>
             <div>
                 <Link rel="stylesheet" href="/" >
-                    <img src="../../src\assets\Emanuel.jpg" alt="Emanuel" id="logo" />
+                    <img src={logo} alt="Emanuel" id="logo" />
                 </Link>
+            </div>
+
+            <div className="soldiersBible">
+                <h1>Soldier's Bible App</h1>
             </div>
 
             <div className="nav">
@@ -87,6 +92,16 @@ const Home = () => {
                     </div>
                 </div>
             }
+
+            <div className="siteInfo">
+                <h2>
+                    Step into Soldier's Bible App, your haven for discovering, sharing, and preserving Bible verses. Tailored for followers of Christ, this community is a judgment-free space where you can explore, share, and discuss verses with others. <br /><br />
+
+                    Embrace the spirit of sharing! This platform thrives on community engagement, helping individuals reconnect with God through His Word. Ready to get started? Sign up, log in, and kick off your exploration! <br /><br />
+
+                    Uncertain where to begin? Look no further than the random verse at the top of the page. Let it guide you, and if it's not precisely what you're seeking, a quick page refresh will present a new verse.
+                </h2>
+            </div>
 
             <div className="footer">
                 <p className="Copy">
