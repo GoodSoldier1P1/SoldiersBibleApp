@@ -18,7 +18,7 @@ const MaterialUIModal: React.FC<IProps> = ({ open, handleClose, handlePostCommen
 
     return (
         <Modal open={open} onClose={handleClose}>
-            <div className="myModal" style={{ padding: '10%', width: '300px', background: '#fff'}}>
+            <div className="myModal" style={{ padding: '5%', width: '300px'}}>
                 <TextareaAutosize
                     value={comment}
                     onChange={(event) => setComment(event.target.value)}

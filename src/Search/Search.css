@@ -1,6 +1,6 @@
 .searchBar {
     text-align: center;
-    padding: 5%;
+    padding: 2% 5% 0 5%;
     height: 10vh;
     /* border-top: 1px solid black; */
 }
@@ -34,6 +34,7 @@
     font-size: x-large;
     /* border: 1px solid black; */
     margin-bottom: 2vh;
+    padding-bottom: 2%;
     /* padding: 1%; */
 }
 
@@ -110,4 +111,9 @@
 
 .myModal {
     margin: 15vh 30%;
+}
+
+.searchInfo {
+    text-align: center;
+    text-shadow: 0.5px 0.5px;
 }

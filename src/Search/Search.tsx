@@ -193,7 +193,7 @@ const Search = (props: any) => {
         <>
 
             <div>
-                <Link rel="stylesheet" href="/" >
+                <Link rel="stylesheet" onClick={handleLogout} >
                     <img src={logo} alt="Emanuel" id="logo" />
                 </Link>
             </div>
@@ -216,6 +216,10 @@ const Search = (props: any) => {
             </div>
 
             <div>
+                <p className="searchInfo">
+                    Your search, your way! Look for a single verse or extend it to multiple verses or a range. <br />
+                    For instance: 2 Timothy 2:3-7 or 2 Timothy 2:3-4, 5-6, 7-8
+                </p>
                 <form onSubmit={handleSubmit} className="searchBar">
                     <label htmlFor="text" className="searchLabel">What verse would you like to search? </label>
                     <input type="text"

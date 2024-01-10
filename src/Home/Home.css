@@ -10,6 +10,12 @@ body{
     background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
 }
 
+.myModal {
+    background: #7F7FD5;
+    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+}
+
 .card {
     text-align: center;
     margin-top: 15vh;
