@@ -6,7 +6,8 @@
 
 .feedComment {
     text-align: center;
-    font-size: larger;
+    font-size: x-large;
+    text-shadow: 1px 1px;
 }
 
 .feedInfo {

@@ -6,6 +6,7 @@ import { Link } from '@mui/material';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import MaterialUIModal from '../Modals/MuiModal';
+import logo from "../assets/Emanuel.jpg"
 
 interface FeedEntry {
     user: {
@@ -107,7 +108,7 @@ const Feed = () => {
 
             <div>
                 <Link rel="stylesheet" href="/" >
-                    <img src="./src/assets/Emanuel.jpg" alt="Emanuel" id="logo" />
+                    <img src={logo} alt="Emanuel" id="logo" />
                 </Link>
             </div>
             <div className="nav">
@@ -116,9 +117,9 @@ const Feed = () => {
                         {' Search '}
                     </Link>
 
-                    <Link href="#" variant="body2" id="profile">
+                    {/* <Link href="#" variant="body2" id="profile">
                         {' Profile '}
-                    </Link>
+                    </Link> */}
 
                     <Link href="#" variant="body2" id="logout" onClick={handleLogout}>
                         {' Logout '}
@@ -133,7 +134,13 @@ const Feed = () => {
                             <p className="feedComment">{entry.user.firstName}: {entry.comment}</p>
                             <p className="verseInfo">{entry.verseData.verseText}</p>
                             <p className="verseInfo">{entry.verseData.reference}</p>
-                            <p className="timestamp">{entry.timestamp.toDate().toLocaleString()}</p>
+                            <p className="timestamp">{entry.timestamp.toDate().toLocaleString('en-US', {
+                                month: 'short',
+                                day: 'numeric',
+                                year: 'numeric',
+                                hour: 'numeric',
+                                minute: 'numeric',
+                            })}</p>
 
                             {auth.currentUser && auth.currentUser.uid === entry.user.userId && (
                                 <>

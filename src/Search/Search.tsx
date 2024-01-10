@@ -204,9 +204,9 @@ const Search = (props: any) => {
                         {" Activity Feed "}
                     </Link>
 
-                    <Link href="#" variant="body2" id="profile">
+                    {/* <Link href="#" variant="body2" id="profile">
                         {" Profile "}
-                    </Link>
+                    </Link> */}
 
                     <Link href="#" variant="body2" id="logout" onClick={handleLogout}>
                         {" Logout "}
