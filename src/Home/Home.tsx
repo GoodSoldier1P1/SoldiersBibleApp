@@ -63,7 +63,7 @@ const Home = () => {
         <>
             <div>
                 <Link rel="stylesheet" href="/" >
-                    <img src="./src/assets/Emanuel.jpg" alt="Emanuel" id="logo" />
+                    <img src="../assets/Emanuel.jpg" alt="Emanuel" id="logo" />
                 </Link>
             </div>
 
