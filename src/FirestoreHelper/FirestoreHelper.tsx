@@ -15,8 +15,15 @@ interface AppUser {
     lastName: string;
 }
 
-export const addToActivityFeed = async (verseData: VerseData, user: AppUser, comment: string) => {
+interface ILiked {
+    liked?: number;
+}
+
+export const addToActivityFeed = async (verseData: VerseData, user: AppUser, comment: string, likes?:ILiked) => {
     try {
+
+        const defaultLikes = likes?.liked !== undefined ? likes.liked : 0;
+
         await setDoc(doc(db, 'activityFeed', comment), {
             user: {
                 userId: user.userId,
@@ -26,6 +33,7 @@ export const addToActivityFeed = async (verseData: VerseData, user: AppUser, com
             verseData: verseData,
             comment: comment,
             timestamp: serverTimestamp(),
+            likes: defaultLikes,
         });
     } catch (error) {
         console.error('Error adding to activity feed: ', error)

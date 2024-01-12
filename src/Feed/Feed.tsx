@@ -7,6 +7,7 @@ import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import MaterialUIModal from '../Modals/MuiModal';
 import logo from "../assets/Emanuel.jpg"
+import { Like } from './Like';
 
 interface FeedEntry {
     user: {
@@ -25,6 +26,7 @@ interface FeedEntry {
     timestamp: {
         toDate: () => Date;
     };
+    likes: number;
 }
 
 
@@ -93,13 +95,37 @@ const Feed = () => {
     const handleDelete = async (entry: FeedEntry) => {
         try {
             if (auth.currentUser && auth.currentUser.uid === entry.user.userId) {
-                await deleteDoc(doc(db, 'activityFeed', entry.comment));
-                console.log("Comment Deleted")
+
+                const userConfirmed = window.confirm("Are you sure you want to delete this?");
+
+                if (userConfirmed){
+                    await deleteDoc(doc(db, 'activityFeed', entry.comment));
+                    console.log("Comment Deleted")
+            }else {
+                console.log("Deletion canceled by user.")
+            }
             } else {
                 console.log("Unauthorized to delete this entry.");
             }
         } catch (error) {
             console.error("Error deleting entry: ", error)
+        }
+    }
+
+
+    const handleLike =async (entry: FeedEntry) => {
+        try {
+            const docRef = doc(db, 'activityFeed', entry.comment);
+
+            if (entry.likes === undefined) {
+                entry.likes = 0;
+            }
+
+            const newLikes = entry.likes + (entry.likes === 0 ? 1 : -1);
+
+            await updateDoc(docRef, { likes: newLikes });
+        } catch (error) {
+            console.error('Error updating likes: ', error)
         }
     }
 
@@ -141,6 +167,10 @@ const Feed = () => {
                                 hour: 'numeric',
                                 minute: 'numeric',
                             })}</p>
+
+                            {auth.currentUser && auth.currentUser.uid !== entry.user.userId &&(
+                                <Like liked={entry.likes > 0} likes={entry.likes || 0} onLike={() => handleLike(entry)} />
+                            )}
 
                             {auth.currentUser && auth.currentUser.uid === entry.user.userId && (
                                 <>

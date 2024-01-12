@@ -135,3 +135,10 @@ hr {
     zoom: 110%;
     background-color: rgb(253, 0, 0);
 }
+
+.likeBtn {
+    background: none;
+    border: none;
+    font-size: x-large;
+    cursor: pointer;
+}

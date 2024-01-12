@@ -139,8 +139,9 @@ const Search = (props: any) => {
                     const user = userDoc.data() as AppUser;
 
                     if (user) {
+                        const likesData = { liked: 0};
                         if (verse && Object.keys(verse).length > 0) {
-                            addToActivityFeed(verse, user, comment);
+                            addToActivityFeed(verse, user, comment, likesData);
                         } else {
                             console.error("Verse Data is not available");
                         }
