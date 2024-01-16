@@ -4,6 +4,7 @@ import Home from "./Home/Home"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Search from "./Search/Search"
 import Feed from "./Feed/Feed"
+import Profile from "./Profile/Profile"
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/search" element={<Search />} />
           <Route path="/activityFeed" element={<Feed />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </BrowserRouter>
     </>
