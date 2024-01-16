@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { collection, orderBy, query, onSnapshot, deleteDoc, doc, updateDoc } from 'firebase/firestore'
+import { collection, orderBy, query, onSnapshot, deleteDoc, doc, updateDoc, getDoc } from 'firebase/firestore'
 import { auth, db } from '../firebase'
 import "./Feed.css"
 import { Link } from '@mui/material';
@@ -113,17 +113,27 @@ const Feed = () => {
     }
 
 
-    const handleLike =async (entry: FeedEntry) => {
+    const handleLike =async (entry: FeedEntry, userId: string) => {
         try {
             const docRef = doc(db, 'activityFeed', entry.comment);
 
-            if (entry.likes === undefined) {
-                entry.likes = 0;
-            }
+            const docSnap = await getDoc(docRef);
+            const entryData = docSnap.data();
 
-            const newLikes = entry.likes + (entry.likes === 0 ? 1 : -1);
+            const entryLikes = entryData?.likes || {}
 
-            await updateDoc(docRef, { likes: newLikes });
+            const userLiked = entryLikes[userId]
+
+            const newLikes = entryData?.likesCount + (userLiked ? -1 : 1)
+
+            await updateDoc(docRef, {
+                likes: {
+                    ...entryData?.likes,
+                    [userId]: !userLiked,
+                },
+                likesCount: newLikes,
+            })
+
         } catch (error) {
             console.error('Error updating likes: ', error)
         }
@@ -169,7 +179,7 @@ const Feed = () => {
                             })}</p>
 
                             {auth.currentUser && auth.currentUser.uid !== entry.user.userId &&(
-                                <Like liked={entry.likes > 0} likes={entry.likes || 0} onLike={() => handleLike(entry)} />
+                                <Like liked={entry.likes > 0} likes={entry.likes || 0} onLike={() => handleLike(entry, auth.currentUser?.uid || '')} />
                             )}
 
                             {auth.currentUser && auth.currentUser.uid === entry.user.userId && (
