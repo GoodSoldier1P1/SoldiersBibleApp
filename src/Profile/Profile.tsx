@@ -4,13 +4,21 @@ import { Link } from '@mui/material';
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase";
 import logo from "../assets/Emanuel.jpg"
+import { WidthWide } from "@mui/icons-material";
 
 
-interface AppUser {
-    userId: string;
-    firstName: string;
-    lastName: string;
-}
+// interface IProfile {
+//     userId: string;
+//     firstName: string;
+//     lastName: string;
+//     FavoriteVerse: {
+//         verseText: string;
+//         book: string;
+//         chapter: number;
+//         verse: number;
+//         reference: string
+//     }
+// }
 
 const Profile = () => {
 
@@ -51,6 +59,8 @@ const Profile = () => {
                     </Link>
                 </div>
             </div>
+
+            <h1>This Page is Still Under Construction</h1>
         </>
     )
 }
