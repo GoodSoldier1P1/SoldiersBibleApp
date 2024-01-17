@@ -4,7 +4,7 @@ import { Link } from '@mui/material';
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase";
 import logo from "../assets/Emanuel.jpg"
-import { WidthWide } from "@mui/icons-material";
+// import { WidthWide } from "@mui/icons-material";
 
 
 // interface IProfile {
